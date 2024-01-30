@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{ site.baseurl }}/style.css">
+		<link rel="icon" type="image/x-icon" href="{{ site.baseurl }}/assets/favicon.ico">
+		<title>{{ page.title }} - Liath Web</title>
+
+		<link rel="preload" as="image" href="{{ site.baseurl }}/assets/btn-minecraft-hover.png">
+		<link rel="preload" as="image" href="{{ site.baseurl }}/assets/btn-panorama-hover.png">
+		<meta content="{{ page.title }}" property="og:title">
+    	<meta content="liath.org" property="og:site_name">
+    	<meta content="{% if page.image %}{{ page.image }}{% else %}{{ site.baseurl }}/assets/post-image-placeholder.png{% endif %}" property="og:image">
+		<link type="application/json+oembed" href="{{ site.baseurl }}/assets/oembed.json">
+    </head>
+    <body>
+		<div class="panorama-button pixelated" title="Toggle panorama movement" onclick="triggerPanoramaMovement();"></div>
+			<div class="backdrop-blur"></div>
+			<audio id="music">
+				<source src="{{ site.baseurl }}/assets/menu2.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicHalloween">
+				<source src="{{ site.baseurl }}/assets/halloween.ogg" type="audio/ogg">
+			</audio>
+			<audio id="musicFestive">
+				<source src="{{ site.baseurl }}/assets/flake.ogg" type="audio/ogg">
+			</audio>
+			<audio id="click">
+				<source src="{{ site.baseurl }}/assets/click.ogg" type="audio/ogg">
+			</audio>
+			<audio id="hover">
+				<source src="{{ site.baseurl }}/assets/hover.ogg" type="audio/ogg">
+			</audio>
+			<div class="container">
+				<a href="{{ site.baseurl }}/"><span class="logo"></span></a>
+    		    {{ content }}
+				<div class="guibox center" style="font-size: 0.90em;">
+					All credits go to <a href="https://www.legacyminigames.net/" target='_blank'>LEM</a> for the base of this site.
+					Liath Web is not associated with Mojang Studios or 4J Studios.<br>
+					NOT AN OFFICIAL MINECRAFT PRODUCT. NOT APPROVED BY OR ASSOCIATED WITH MOJANG OR MICROSOFT.
+				</div>
+			</div>
+    </body>
+    <script src="{{ site.baseurl }}/script.js"></script>
+</html>

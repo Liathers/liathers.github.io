@@ -1,0 +1,85 @@
+---
+layout: default
+title: "Server"
+---
+
+<style>
+	.servers {
+		display: grid;
+		grid-template-columns: 210px auto;
+		gap: 10px;
+		text-align: left;
+	}
+	
+	.server-text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 4;
+		overflow: hidden;
+		-webkit-background-clip: text;
+		background-clip: text;
+		max-height: 7em;
+	}
+	
+	.icon-image {
+		height: 200px;
+		width: 200px;
+		display: inline-block;
+		image-rendering: pixelated;
+		border: 2px solid black;
+	}
+	
+	.server-description {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.server-description h3 {
+		display: inline;
+		white-space: wrap;
+	}
+	
+	.server-link {
+		position: absolute;
+		bottom: 0;
+	}
+	
+	@media screen and (max-width: 900px){
+		.post-text {
+			-webkit-line-clamp: 2;
+		}
+	}
+	
+	@media screen and (max-width: 760px){
+		.post-text {
+			-webkit-line-clamp: 1;
+		}
+		
+		.minecraft-button {
+			width: 240px;
+			font-size: 10px;
+			background-image: url('assets/btn-minecraft-small.png');
+		}
+	
+		.minecraft-button:hover {
+			background-image: url('assets/btn-minecraft-small-hover.png');
+		}
+	}
+</style>
+
+<div class="guibox center">
+    <h1>Liath Network</h1>
+    <div class="servers">
+        <img src="{{ site.baseurl }}/assets/network/frontend-icon.png" class="icon-image">
+        <div class="server-description">
+            <h3 style="display: inline;">Frontend</h3><br>
+            <span class="server-text">MOTD Line 1<br>MOTD Line 2<br>Players Online (0/-1)<br>Version 1.0.0</span>
+            <!--<a href="{{ post.permalink }}" class="minecraft-button server-link">Copy Server IP</a>-->
+        </div>
+    </div>
+
+    <div class="guibox center">
+        <a href="{{ site.baseurl }}/" class="minecraft-button center">Return</a>
+    </div>
+</div>
