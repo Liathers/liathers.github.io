@@ -63,9 +63,9 @@ title: "MC Network"
 </style>
 
 <div class="guibox center">
-	<h1>Liath Network</h1>
+	<h1>Minecraft Server</h1>
 	<p>This will ping the frontend of my Minecraft Server, and then provide basic information.</p>
-    <div class="guibox center" stype="text-align: left;">
+    <div class="guibox center">
         <div class="server-base">
             <img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
             <div class="server-text">
@@ -74,9 +74,26 @@ title: "MC Network"
             </div>
         </div>
     </div>
+
+	<h1>Mojang Services</h1>
+	<p>This will give you a basic rundown on the current operating status of the different services.</p>
 	<div class="guibox center">
-        <a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
-	</div>
+		<table style="width: 100%; height: 100%;">
+			<tr>
+			  <th>Xbox Services</th>
+			  <th>Session Server</th>
+			  <th>Mojang API</th>
+			  <th>Minecraft API</th>
+			</tr>
+			<tr>
+			  <td id="Xbox services">Obtaining...</td>
+			  <td id="SessionServer">Obtaining...</td>
+			  <td id="Mojang API">Obtaining...</td>
+			  <td id="Minecraft API">Obtaining...</td>
+			</tr>
+		  </table>
+	</div><br>
+	<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
 </div>
 
 <script src="{{ site.baseurl }}/mc.js"></script>
