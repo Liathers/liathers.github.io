@@ -1,10 +1,9 @@
 ---
 layout: default
-title: "Server"
+title: "MC Network"
 ---
-
 <style>
-	.servers {
+	.server-base {
 		display: grid;
 		grid-template-columns: 210px auto;
 		gap: 10px;
@@ -14,14 +13,14 @@ title: "Server"
 	.server-text {
 		display: -webkit-box;
 		-webkit-box-orient: vertical;
-		-webkit-line-clamp: 4;
+		-webkit-line-clamp: 6;
 		overflow: hidden;
 		-webkit-background-clip: text;
 		background-clip: text;
-		max-height: 7em;
+		max-height: 12em;
 	}
 	
-	.icon-image {
+	.server-icon {
 		height: 200px;
 		width: 200px;
 		display: inline-block;
@@ -29,30 +28,25 @@ title: "Server"
 		border: 2px solid black;
 	}
 	
-	.server-description {
+	.server-text {
 		position: relative;
 		display: inline-block;
 		vertical-align: top;
 	}
 	
-	.server-description h3 {
+	.server-text h3 {
 		display: inline;
 		white-space: wrap;
 	}
 	
-	.server-link {
-		position: absolute;
-		bottom: 0;
-	}
-	
 	@media screen and (max-width: 900px){
-		.post-text {
+		.server-text {
 			-webkit-line-clamp: 2;
 		}
 	}
 	
 	@media screen and (max-width: 760px){
-		.post-text {
+		.server-text {
 			-webkit-line-clamp: 1;
 		}
 		
@@ -69,17 +63,19 @@ title: "Server"
 </style>
 
 <div class="guibox center">
-    <h1>Liath Network</h1>
-    <div class="servers">
-        <img src="{{ site.baseurl }}/assets/network/frontend-icon.png" class="icon-image">
-        <div class="server-description">
-            <h3 style="display: inline;">Frontend</h3><br>
-            <span class="server-text">MOTD Line 1<br>MOTD Line 2<br>Players Online (0/-1)<br>Version 1.0.0</span>
-            <!--<a href="{{ post.permalink }}" class="minecraft-button server-link">Copy Server IP</a>-->
+	<h1>Liath Network</h1>
+    <div class="guibox center" stype="text-align: left;">
+        <div class="server-base">
+            <img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
+            <div class="server-text">
+                <h3 style="display: inline;">Network Frontend</h3> <span id="host-name-0" style="color: #777777">Unable to obtain.</span><br>
+                <span id="server-text-0" class="server-text"></span>
+            </div>
         </div>
     </div>
-
-    <div class="guibox center">
-        <a href="{{ site.baseurl }}/" class="minecraft-button center">Return</a>
-    </div>
+	<div class="guibox center">
+        <a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
+	</div>
 </div>
+
+<script src="{{ site.baseurl }}/network.js"></script>
