@@ -157,7 +157,7 @@ h2:after {
 .single-index-flexbox {
 	display: flex;
 	gap: 10px;
-	text-align: center;
+	text-align: left;
 }
 
 .single-index-flexbox ul {
