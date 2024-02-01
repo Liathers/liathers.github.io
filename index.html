@@ -7,18 +7,23 @@ title: "Home"
 	<h1>This Site is still a work in progress.</h1>
 </div>
 
-<div class="multiple-credits-grid">
+<div class="multiple-index-grid">
 	<!--Left-->
-	<span class="guibox single-credit-flexbox" style="grid-area: d;">
+	<span class="guibox single-index-flexbox" style="grid-area: a;">
+		These buttons take you to the different places within my site, so feel free to explore around until you find something interesting!<br>
+		This site will still be missing some things.
+	</span>
+	<span id="server-online" class="guibox single-index-flexbox" style="grid-area: c;">
+	</span>
+	<!--Right-->
+	<span id="description-text" class="guibox single-index-flexbox" style="grid-area: b;">
 		<div class="button-list">
 			<a class="minecraft-button center" href="{{ site.baseurl }}/about">About</a>
-			<a class="minecraft-button center" href="{{ site.baseurl }}/network">Liath Network</a>
+			<a class="minecraft-button center" href="{{ site.baseurl }}/mc">Minecraft Server</a>
 			<a class="minecraft-button center" href="{{ site.baseurl }}/projects">Previous Projects</a>
+			<a class="minecraft-button center" href="https://www.legacyminigames.net/">Legacy Edition Minigames</a>
 		</div>
-	</span>	
-	<!--Right-->
-	<span class="guibox single-credit-flexbox" style="grid-area: e;">
-		These buttons will take you to the different places within my site, so feel free to explore around until you find something interesting!<br>
-		<br>This site is still heavily under development, so things may be missing or non-functional.
-	</span>	
+	</span>
 </div>
+
+<script src="{{ site.baseurl }}/index.js"></script>

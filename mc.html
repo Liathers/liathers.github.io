@@ -1,0 +1,82 @@
+---
+layout: default
+title: "MC Network"
+---
+<style>
+	.server-base {
+		display: grid;
+		grid-template-columns: 210px auto;
+		gap: 10px;
+		text-align: left;
+	}
+	
+	.server-text {
+		display: -webkit-box;
+		-webkit-box-orient: vertical;
+		-webkit-line-clamp: 6;
+		overflow: hidden;
+		-webkit-background-clip: text;
+		background-clip: text;
+		max-height: 12em;
+	}
+	
+	.server-icon {
+		height: 200px;
+		width: 200px;
+		display: inline-block;
+		image-rendering: pixelated;
+		border: 2px solid black;
+	}
+	
+	.server-text {
+		position: relative;
+		display: inline-block;
+		vertical-align: top;
+	}
+	
+	.server-text h3 {
+		display: inline;
+		white-space: wrap;
+	}
+	
+	@media screen and (max-width: 900px){
+		.server-text {
+			-webkit-line-clamp: 2;
+		}
+	}
+	
+	@media screen and (max-width: 760px){
+		.server-text {
+			-webkit-line-clamp: 1;
+		}
+		
+		.minecraft-button {
+			width: 240px;
+			font-size: 10px;
+			background-image: url('assets/btn-minecraft-small.png');
+		}
+	
+		.minecraft-button:hover {
+			background-image: url('assets/btn-minecraft-small-hover.png');
+		}
+	}
+</style>
+
+<div class="guibox center">
+	<h1>Liath Network</h1>
+	<p>This will ping the frontend of my Minecraft Server, and then provide basic information.</p>
+    <div class="guibox center" stype="text-align: left;">
+        <div class="server-base">
+            <img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
+            <div class="server-text">
+                <h3 style="display: inline;">Network Frontend</h3> <span id="host-name-0" style="color: #777777"></span><br>
+                <span id="server-text-0" class="server-text">Pinging server...</span>
+            </div>
+        </div>
+    </div>
+	<div class="guibox center">
+        <a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
+	</div>
+</div>
+
+<script src="{{ site.baseurl }}/mc.js"></script>

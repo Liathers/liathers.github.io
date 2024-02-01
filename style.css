@@ -142,8 +142,8 @@ h2:after {
 	content: ' ---';
 }
 
-/* Credits */
-.multiple-credits-grid {
+/* Index */
+.multiple-index-grid {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-areas: 	"a b"
@@ -154,13 +154,13 @@ h2:after {
 	gap: 5px;
 }
 
-.single-credit-flexbox {
+.single-index-flexbox {
 	display: flex;
 	gap: 10px;
-	text-align: right;
+	text-align: center;
 }
 
-.single-credit-flexbox ul {
+.single-index-flexbox ul {
 	margin: 0;
 	list-style: none;
 	padding-left: 0;
@@ -181,7 +181,7 @@ h2:after {
 }
 
 @media screen and (max-width: 1100px){
-	.multiple-credits-grid {
+	.multiple-index-grid {
 		grid-template-areas:	"a"
 					"c"
 					"b"
