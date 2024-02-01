@@ -17,9 +17,9 @@ function checkServerOnline(serverIP, elementInstance) {
       if (data.online) {
         // If online, display the server name, version, players, and motd
         elementDescription.innerHTML = `
-          <p>${data.motd.html.join("<br>")}</p>
-          <p>Version: ${data.version}</p>
-          <p>Players: ${data.players.online}/${data.players.max}</p>`;
+          ${data.motd.html.join("<br>")}<br><br>
+          Version: ${data.version}<br>
+          Players: ${data.players.online}/${data.players.max}<br>`;
         elementHostName.innerHTML = data.hostname;
         elementImage.src = data.icon;
 
@@ -29,7 +29,7 @@ function checkServerOnline(serverIP, elementInstance) {
           let playerList = data.players.list.join(", ");
 
           // Add a new paragraph with the player list
-          elementDescription.innerHTML += `<p>Online players: ${playerList}</p>`;
+          elementDescription.innerHTML += `${playerList}`;
         }
       } else {
         // If offline, display a message
