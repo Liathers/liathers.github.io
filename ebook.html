@@ -1,0 +1,27 @@
+---
+layout: default
+title: "eBook"
+---
+<style>
+    .pdf-holder {
+		padding: 3px;
+		border-image: url('/assets/guimenu-alt.png');
+		border-image-slice: 128 128 fill;
+		border-image-width: 40px;
+        height: 688px;
+	}
+</style>
+
+
+<div class="guibox center">
+	<h1>Course eBook</h1>
+    <p>This is the eBook for the Cambridge Technicals Level 3 IT course. Shhh, don't tell anybody.</p>
+
+    <div class="pdf-holder">
+        <object data="/assets/eBook.pdf" type="application/pdf" width="100%" height="100%">
+            <p>Unable to display PDF file. <a href="/assets/eBook.pdf">Download</a> instead.</p>
+        </object>
+    </div>
+    <br>
+	<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
+</div>
