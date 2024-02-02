@@ -77,7 +77,6 @@ body {
 	border-image: url('/assets/guimenu-alt.png');
 	border-image-slice: 128 128 fill;
     border-image-width: 40px;
-	margin-top: 10px;
 }
 
 .logo {
