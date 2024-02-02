@@ -19,13 +19,16 @@ title: "MC Network"
 		background-clip: text;
 		max-height: 14em;
 	}
-	
+
 	.server-icon {
-		height: 187px;
-		width: 187px;
+		height: 190px;
+		width: 190px;
 		display: inline-block;
 		image-rendering: pixelated;
-		border: 2px solid black;
+		padding: 3px;
+		border-image: url('/assets/guimenu-alt.png');
+		border-image-slice: 128 128 fill;
+		border-image-width: 40px;
 	}
 	
 	.server-text {
@@ -63,41 +66,42 @@ title: "MC Network"
 </style>
 
 <div class="guibox center">
-	<h1>Minecraft Server</h1>
-	<p>This will ping the frontend of my Minecraft Server, and then provide basic information. The backends will be added once Velocity has had some of it's quirks fixed.</p>
-    <div class="guibox center">
-        <div class="server-base">
-            <img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
-            <div class="server-text">
-                <h3 style="display: inline;">Network Frontend</h3> <span id="host-name-0" style="color: #777777"></span><br>
-                <span id="server-text-0" class="server-text">Pinging server...</span>
-            </div>
-        </div>
-    </div>
+	<div class="guibox-alt center">
+		<h1>Minecraft Server</h1>
+			<p>This will ping the frontend of my Minecraft Server, and then provide basic information. The backends will be added once Velocity has had some of it's quirks fixed.</p>
+			<div class="guibox center">
+				<div class="server-base">
+					<img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
+					<div class="server-text">
+						<h3 style="display: inline;">Network Frontend</h3> <span id="host-name-0" style="color: #777777"></span><br>
+						<span id="server-text-0" class="server-text">Pinging server...</span>
+					</div>
+				</div>
+			</div>	
 
-	<h1>Mojang Services</h1>
-	<p>This will give you a basic rundown on the current operating status of the different services.</p>
-	<div class="guibox center">
-		<table style="width: 100%; height: 100%;">
-			<tr>
-			  <th>Xbox Services</th>
-			  <th>Session Server</th>
-			  <th>Mojang API</th>
-			  <th>Minecraft API</th>
-			</tr>
-			<tr>
-			  <td id="Xbox services">Obtaining...</td>
-			  <td id="SessionServer">Obtaining...</td>
-			  <td id="Mojang API">Obtaining...</td>
-			  <td id="Minecraft API">Obtaining...</td>
-			</tr>
-		  </table>
+		<h1>Mojang Services</h1>
+		<p>This will give you a basic rundown on the current operating status of the different services.</p>
+		<div class="guibox center">
+			<table style="width: 100%; height: 100%;">
+				<tr>
+				<th>Xbox Services</th>
+				<th>Session Server</th>
+				<th>Mojang API</th>
+				<th>Minecraft API</th>
+				</tr>
+				<tr>
+				<td id="Xbox services">Obtaining...</td>
+				<td id="SessionServer">Obtaining...</td>
+				<td id="Mojang API">Obtaining...</td>
+				<td id="Minecraft API">Obtaining...</td>
+				</tr>
+			</table>
+		</div>
+		<p>This page utilises <a href="https://api.mcsrvstat.us/" target='_blank'>Minecraft Server Status API</a> and <a href="https://mcping.me/api/" target='_blank'>mcping API</a>
+			to ping the servers and also get the status of the Mojang Services.</p>
 	</div>
-	<p>This page utilises <a href="https://api.mcsrvstat.us/" target='_blank'>Minecraft Server Status API</a> and <a href="https://mcping.me/api/" target='_blank'>mcping API</a>
-		to ping the servers and also get the status of the Mojang Services.</p>
-	<div class="guibox-buttons">
-		<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
-	</div>
+	<br>
+	<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
 </div>
 
 <script src="{{ site.baseurl }}/mc.js"></script>

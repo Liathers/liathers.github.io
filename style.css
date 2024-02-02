@@ -71,15 +71,22 @@ body {
 	margin-top: 10px;
 }
 
+.guibox-alt {
+	font-family: 'Minecraft', sans-serif;
+	padding: 2em;
+	border-image: url('/assets/guimenu-alt.png');
+	border-image-slice: 128 128 fill;
+    border-image-width: 40px;
+	margin-top: 10px;
+}
+
 .guibox-buttons {
 	font-family: 'Minecraft', sans-serif;
 	padding: 2em;
 	border-image: url('/assets/guimenu.png');
 	border-image-slice: 128 128 fill;
-    border-image-width: 40px;
-	width: 43%;
+    border-image-width: 400px;
 	margin: auto;
-	margin-top: 10px;
 }
 
 .logo {

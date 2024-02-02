@@ -31,7 +31,7 @@ function checkServerOnline(serverIP, elementInstance) {
           let playerList = data.players.list.join(", ");
 
           // Add a new paragraph with the player list
-          elementDescription.innerHTML += `<p>${playerList}</p>`;
+          elementDescription.innerHTML += `${playerList}`;
         }
       } else {
         // If offline, display a message
