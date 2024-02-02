@@ -148,6 +148,14 @@ if (halloweenMode == true) {
       box.style.borderImageSlice ='128 128 fill';
       box.style.borderImageWidth = '64px';
     });
+	// Get all elements with the class name "guibox"
+	const guiboxButtons = document.querySelectorAll('.guibox-buttons');
+    // Loop through the elements and apply the halloween border image
+    guiboxButtons.forEach(box => {
+      box.style.borderImage = 'url(' + baseUrl + '/assets/halloween/h-guimenu.png)';
+      box.style.borderImageSlice ='128 128 fill';
+      box.style.borderImageWidth = '64px';
+    });
 }
 
 // If festive mode is active, apply the festive theme
@@ -171,4 +179,38 @@ if (festiveMode == true) {
 		button.style.backgroundImage = 'url(' + baseUrl + '/assets/festive/f-btn-panorama.png)';
 	  });
 	});
+
+	  // Get all elements with the class name "minecraft-button"
+	const minecraftbuttons = document.querySelectorAll('.minecraft-button');
+	// Loop through the elements and add event listeners
+	minecraftbuttons.forEach(button => {
+	  // Set the background image of the element to the festive minecraft button
+	  button.style.backgroundImage = 'url(' + baseUrl + '/assets/festive/f-btn-minecraft.png)';
+	  // On mouse enter, change the background image to the festive minecraft button hover
+	  button.addEventListener('mouseenter', () => {
+		button.style.backgroundImage = 'url(' + baseUrl + '/assets/festive/f-btn-minecraft-hover.png)';
+	  });
+
+	  // On mouse leave, change the background image to the festive minecraft button
+	  button.addEventListener('mouseleave', () => {
+		button.style.backgroundImage = 'url(' + baseUrl + '/assets/festive/f-btn-minecraft.png)';
+	  });
+	});
+
+	// Get all elements with the class name "guibox"
+	const guibox = document.querySelectorAll('.guibox');
+    // Loop through the elements and apply the festive border image
+    guibox.forEach(box => {
+      box.style.borderImage = 'url(' + baseUrl + '/assets/festive/f-guimenu.png)';
+      box.style.borderImageSlice ='128 128 fill';
+      box.style.borderImageWidth = '64px';
+    });
+	// Get all elements with the class name "guibox"
+	const guiboxButtons = document.querySelectorAll('.guibox-buttons');
+    // Loop through the elements and apply the festive border image
+    guiboxButtons.forEach(box => {
+      box.style.borderImage = 'url(' + baseUrl + '/assets/festive/f-guimenu.png)';
+      box.style.borderImageSlice ='128 128 fill';
+      box.style.borderImageWidth = '64px';
+    });
 }

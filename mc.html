@@ -64,7 +64,7 @@ title: "MC Network"
 
 <div class="guibox center">
 	<h1>Minecraft Server</h1>
-	<p>This will ping the frontend of my Minecraft Server, and then provide basic information.</p>
+	<p>This will ping the frontend of my Minecraft Server, and then provide basic information. The backends will be added once Velocity has had some of it's quirks fixed.</p>
     <div class="guibox center">
         <div class="server-base">
             <img id="server-icon-0" src="{{ site.baseurl }}/assets/unknown_pack.png" class="server-icon">
@@ -92,8 +92,12 @@ title: "MC Network"
 			  <td id="Minecraft API">Obtaining...</td>
 			</tr>
 		  </table>
-	</div><br>
-	<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
+	</div>
+	<p>This page utilises <a href="https://api.mcsrvstat.us/" target='_blank'>Minecraft Server Status API</a> and <a href="https://mcping.me/api/" target='_blank'>mcping API</a>
+		to ping the servers and also get the status of the Mojang Services.</p>
+	<div class="guibox-buttons">
+		<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
+	</div>
 </div>
 
 <script src="{{ site.baseurl }}/mc.js"></script>
