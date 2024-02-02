@@ -80,15 +80,6 @@ body {
 	margin-top: 10px;
 }
 
-.guibox-buttons {
-	font-family: 'Minecraft', sans-serif;
-	padding: 2em;
-	border-image: url('/assets/guimenu.png');
-	border-image-slice: 128 128 fill;
-    border-image-width: 400px;
-	margin: auto;
-}
-
 .logo {
 	display: inline-block;
 	aspect-ratio: 720 / 188;
