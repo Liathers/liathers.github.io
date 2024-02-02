@@ -81,9 +81,9 @@ body {
 
 .logo {
 	display: inline-block;
-	aspect-ratio: 720 / 188;
-	width: 720px;
-	max-width: 90%;
+	aspect-ratio: 1003 / 189;
+	width: 1003px;
+	max-width: 70%;
 	image-rendering: pixelated;
 	background-size: cover;
 }
