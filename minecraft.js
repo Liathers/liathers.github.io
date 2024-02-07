@@ -83,7 +83,7 @@ function getDataFromMojangServices() {
             break;
           case "PossibleProblems":
             textResponse = "Potential Problems";
-            element.style.color = "yellow";
+            element.style.color = "orange";
             break;
           case "DefiniteProblems":
             textResponse = "Definite Problems";
