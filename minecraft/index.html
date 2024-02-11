@@ -77,7 +77,13 @@ title: "Minecraft"
 						<span id="server-text-0" class="server-text">Pinging server...</span>
 					</div>
 				</div>
-			</div>	
+			</div>
+		
+		<h1>SMP World Map</h1>
+		<p>This is a render of the world map for my SMP server. This render will be updated approximately every week. You can view the map directly <a href="{{ site.baseurl }}/minecraft/map" target='_blank'>here</a>.</p>
+		<div class="guibox center">
+			<iframe width="100%" height="500px" src="{{ site.baseurl }}/minecraft/map"></iframe>
+		</div>
 
 		<h1>Mojang Services</h1>
 		<p>This will give you a basic rundown on the current operating status of the different services utilised by Minecraft.</p>
@@ -98,10 +104,10 @@ title: "Minecraft"
 			</table>
 		</div>
 		<p>This page utilises <a href="https://api.mcsrvstat.us/" target='_blank'>Minecraft Server Status API</a> and <a href="https://mcping.me/api/" target='_blank'>mcping API</a>
-			to ping the servers and also get the status of the Mojang Services.</p>
+			to ping the servers and also get the status of the Mojang Services, as well as <a href="https://github.com/neocturne/MinedMap" target='_blank'>MinedMap</a> for the World Map.</p>
 	</div>
 	<br>
 	<a class="minecraft-button center" href="{{ site.baseurl }}/">Return</a>
 </div>
 
-<script src="{{ site.baseurl }}/minecraft.js"></script>
+<script src="{{ site.baseurl }}/minecraft/minecraft.js"></script>
