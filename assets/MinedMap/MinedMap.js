@@ -343,13 +343,10 @@ async function loadSigns(signLayer) {
 	}
 }
 
+//Custom function to to allow for other maps to be easily added
 function getScriptData() {
-	// Get the first script element in the document
 	let script = document.scripts[1];
-	// Get the data value from the script element
 	let data = script.dataset.map;
-	// Return the data value as plaintext
-	console.log(data)
 	return data
 }
 
