@@ -46,6 +46,44 @@ function checkServerOnline(serverIP, elementInstance) {
     });
 }
 
+function checkServerOnlineBedock(serverIP, elementInstance) {
+  // The element to be updated
+  let elementDescription = document.getElementById(
+    `server-text-${elementInstance}`
+  );
+  let elementHostName = document.getElementById(`host-name-${elementInstance}`);
+
+  // The API URL with the server IP as a parameter
+  let apiURL = "https://api.mcsrvstat.us/bedrock/2/" + serverIP; // Updated API URL
+
+  // Use the fetch API to make a GET request to the API
+  fetch(apiURL)
+    .then((response) => response.json()) // Parse the response as JSON
+    .then((data) => {
+      // Check if the server is online
+      if (data.online) {
+        // If online, display the server name, version, players, and motd
+        elementDescription.innerHTML = `
+          ${data.motd.html.join("<br>")}<br><br>
+          Version: ${data.version}<br>
+          Map: ${data.map}<br>
+          Gamemode: ${data.gamemode}<br>
+          Players: ${data.players.online}/${data.players.max}<br>`;
+        elementHostName.innerHTML = data.hostname;
+      } else {
+        // If offline, display a message
+        elementDescription.innerHTML = "<p>The server is offline.</p>";
+        elementDescription.style.color = "red";
+      }
+    })
+    .catch((error) => {
+      // If there is an error, display it
+      elementDescription.innerHTML = `<p>An error occurred: ${error}</p>`;
+      elementDescription.style.color = "red";
+    });
+}
+
+
 // This function uses the fetch API and the allorigins API to get data from the mojang services api
 // and sets it to 4 different html elements with formatted text
 function getDataFromMojangServices() {
@@ -108,6 +146,7 @@ function getDataFromMojangServices() {
 window.onload = function () {
   // Call the checkServerOnline function with the server IP and the element instance
   checkServerOnline("mc.liath.org", "0");
+  checkServerOnlineBedock("bedrock.mc.liath.org:25577", "1");
 
   // Call the getDataFromMojangServices function
   getDataFromMojangServices();
