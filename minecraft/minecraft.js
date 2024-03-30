@@ -32,6 +32,14 @@ function getServerPingInfo(serverIP, elementInstance, javaEdition) {
             Players: ${data.players.online}/${data.players.max}<br>`;
           elementHostName.innerHTML = data.hostname;
           elementImage.src = data.icon;
+
+          // If the server has a list of online players, append it to the elementDescription
+          if (data.players.list) {
+            // Join the player names with commas and spaces
+            let playerList = data.players.list.join(", ");
+            // Add a new paragraph with the player list
+            elementDescription.innerHTML += `${playerList}`;
+          }
         } else {
           elementDescription.innerHTML = `
             ${data.motd.html.join("<br>")}<br><br>
