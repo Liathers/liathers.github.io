@@ -20,13 +20,13 @@ function checkServerOnline(serverIP) {
         if (actualData === "Online") {
           // Set the element text color to green and show the server status
           element.style.color = "green";
-          element.innerHTML += "The Minecraft Server is currently online!";
+          element.innerHTML += "The Java SMP Server is currently online!";
         }
         // If the data is "offline", the server is offline
         else if (actualData === "Offline") {
           // Set the element text color to red and show the server status
           element.style.color = "red";
-          element.innerHTML += "The Minecraft Server is currently offline.";
+          element.innerHTML += "The Java SMP Server is currently offline.";
         }
         // If the data is neither "online" nor "offline", there is an error
         else {
