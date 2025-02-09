@@ -124,8 +124,8 @@ function getDataFromMojangServices() {
 // This function will run once the page is loaded
 window.onload = function () {
   // Call the getServerPingInfo function with the server IP, the element instance and whether it is Java or Bedrock Edition
-  getServerPingInfo("mc.liath.org", "0", true);
-  getServerPingInfo("bedrock.mc.liath.org:25577", "1", false);
+  getServerPingInfo("mc.liath.uk", "0", true);
+  getServerPingInfo("bedrock.mc.liath.uk:25577", "1", false);
 
   // Call the getDataFromMojangServices function
   getDataFromMojangServices();
